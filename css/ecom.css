@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    color: black;
+    background-color: rgba(240, 241, 145, 0.808);
+    padding: 0;
+}
+img{
+    width: 100%;
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+.cartnumb a:visited{
+    color: black;
+}
+.head{
+     
+    font-size: 2rem;
+    color: black;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin:  1rem;
+}
+/**
+*! first body
+**/
+.header{
+    min-height: 100vh;
+    border: 1px solid rgb(85, 22, 22);
+}
+/* .sort ul{
+   text-align: center;
+   margin-bottom: 2rem;
+}
+.sort ul li{
+    display: inline;
+    border: 1px solid white;
+    padding: 10px 20px;
+    margin: 8px 2rem;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+.sort ul li:hover{
+    background-color: #41EAD4;
+    border: none;
+    padding: 10px 25px;
+    text-align: left;
+    transition: 0.6s;
+
+} */
+.mainmenu{
+    display: flex;
+    gap: 1rem;
+}
+.mainmenu select{
+    background-color: rgba(32, 32, 32, 0.363);
+    color: black;
+    padding: 10px 1.5rem;
+    border: none;
+    
+}
+.mainmenu option{
+    background-color: black;
+    color: wheat;
+    border: none;
+    padding: 10px 1.5rem;
+}
+/**
+*! end
+**/
+
+.cartnumb{
+    position: relative;
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.cartnumb p {
+    background-color: white;
+    position: absolute;
+    top: -15px;
+    right: -5px;
+    font-size: 2rem; 
+    border: 1px solid black;
+}
+
+/**
+*? content
+**/
+/* .content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75vh;
+} */
+/**
+*! shopdisplay
+**/
+
+.shopdisplay{
+    padding: 0.5rem;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, 250px);
+   place-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    overflow-x: auto;
+}
+/**
+*?cartdisplay
+**/
+.cartdisplay{
+    display: none;
+    width: 400px;
+    flex-direction: column;
+    gap: 2rem;
+}
+/**
+*? item
+**/
+
+.item{
+    display: flex;
+    border: 1px solid #351818;
+    color: rgb(128, 62, 62);
+    border-radius: 8px;
+    transition: 0.4s;
+    padding-top: 0.01px;
+}
+.item:hover{
+    padding: 1rem;
+    border-color: rgb(73, 3, 73);
+    border-radius: 0;
+    transition: 0.4s;
+}
+.item img{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.description{
+    display: flex;
+}
+.nam{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.math{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px;
+}
+/* for full item descriction*/
+ .fullitem{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border: 1px solid white;
+}
+.fullitem img{
+    width: 300px;
+    
+}
+.upperdescription{
+    display: flex;
+    justify-content: space-between;
+}
+.upperdescription i{
+    font-size: 2rem;
+    color: black
+}
+.fulldescription{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.fullitemname{
+    font-size: 2rem;
+}
+.fullmath{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fulldecs{
+    width: 70ch;
+}
+.fullprice{
+    font-size: 3rem;
+}
+.fulldescription i{
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 600px ) {
+    .head {
+        font-size: 1rem;
+    }
+    .cartnumb{
+        padding: 8px 3px;
+    }
+    .cartnumb i{
+        font-size: 2rem;
+    }
+    .cartnumb p{
+        font-size: 1rem;
+    }
+    /* .sort{
+        font-size: 10px;
+    }
+    .sort ul li{
+        padding: 4px;
+        margin: 4px 8px;
+    }
+    .sort ul li:hover{
+        padding: 8px 15px;
+        margin: 10px 12px;
+    } */
+    .mainmenu select{
+        background-color: rgba(32, 32, 32, 0.363);
+        color: white;
+        padding: 6px 1rem;
+        border: none;
+        
+    }
+    .mainmenu option{
+        background-color: black;
+        color: white;
+        padding: 6px 1rem;
+    }
+    .fullitem{
+        width: fit-content;
+    }
+}

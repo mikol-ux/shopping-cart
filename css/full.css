@@ -1,0 +1,89 @@
+/* for full item descriction*/
+.fullitem{
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+   /*  min-height: 100vh; */
+}
+.fullitem img{
+    display: block;
+    width: 100%;
+    
+}
+.upperdescription{
+    display: flex;
+    justify-content: space-between;
+}
+/* .upperdescription i{
+    background-color: black;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.199);
+} */
+.fulldescription{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    word-break: keep-all;
+    gap: 3rem;
+
+}
+.fullitemname{
+    font-size: 2rem;
+}
+.fullmath{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fulldecs{
+    width: 100%;
+}
+.fullprice{
+    font-size: 3rem;
+}
+.fulldescription i{
+    font-size: 1.5rem;
+}
+.control{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.control p{
+    background-color: black;
+    color: antiquewhite;
+    padding: 1rem 6rem;
+    border-radius: 10px;
+}
+.control i{
+    background-color: grey;
+    padding: 9px;
+    border-radius: 4.5px;
+}
+/*end*/
+@media all and (max-width: 600px) {
+    /* .upperdescription{
+       
+    } */
+    /* unused program */
+   /*  .upperdescription i{
+        color: blue;
+        position: absolute;
+    } */
+    .fullitem{
+        flex-direction: column;
+    }
+    .fulldecs{
+        width: fit-content;
+        word-wrap: break-word;
+    }
+    .fullprice{
+        font-size: 2rem;
+    }
+    .control p{
+        padding: 10px 1.5rem;
+    }
+    .control i{
+        padding: 8px;
+    }
+}
