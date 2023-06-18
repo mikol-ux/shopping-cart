@@ -13,7 +13,7 @@ search.addEventListener("keyup", (e) => {
    let a = e.target.value
    let ink = shopitems.filter((x) => {
     return (
-        x.name.includes(a)
+        x.name.toLowerCase().includes(a.toLowerCase())
     )
    })
    print(ink)
@@ -32,6 +32,20 @@ ent.addEventListener("click", (e)=> {
     sessionStorage.setItem('now', JSON.stringify(arr)) 
     location.reload()
 })
+addEventListener("keypress", (e)=> {
+    
+    if(e.key === "Enter"){
+        let inkall = shopitems.filter((x) => {
+            return(
+               x.name.includes(search.value)
+            )
+           })
+          let arr = inkall.map(({id}) => { return {id}})
+          console.log(arr)
+           sessionStorage.setItem('now', JSON.stringify(arr)) 
+           location.reload()
+    }
+})
 // render item from the search result
 function print(values){
     if(search.value === ""){
@@ -41,7 +55,6 @@ function print(values){
         output.style.display = "flex"
         output.innerHTML = ""
     values.forEach((x) => {
-        console.log(x.id)
       output.innerHTML += `<div class="searchresultitem" onclick="addtoshow(${x.id})">
       <img src="${x.img}" alt="">
       <div class="description">

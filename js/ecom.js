@@ -14,8 +14,8 @@ function shopitemsdisplay(value){
     let filteritem = shopitems.filter((x) => x.category === value)
     let secondfilter = filteritem.map(({id}) => {return{id}})
      sessionStorage.setItem('filtered', JSON.stringify(secondfilter))
-     displayproduct()
      location.reload()
+     displayproduct()
 }
 // for displaying filtered items
  function   displayproduct(){
@@ -54,7 +54,6 @@ function shopitemsdisplay(value){
                    </p>
                    <div class="math">
                        <p>$${search.price}</p>
-                       <p onclick="fulldetail(${search.id})">full</p>
                        <i class="bi bi-bag-plus-fill" onclick="addtocart(${id})"></i>
                    </div>
            
